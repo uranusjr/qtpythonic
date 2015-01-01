@@ -32,6 +32,8 @@ def test_property():
     eq_(obj.object_name, '')
     obj.object_name = 'foo'
     eq_(obj.object_name, 'foo')
+    obj.set_object_name('bar')
+    eq_(obj.get_object_name(), 'bar')
 
 
 def test_accessors():
