@@ -2,13 +2,13 @@
 Qt Pythonic
 ===============================
 
-.. image:: https://badge.fury.io/py/qtpythonic.png
+.. .. image:: https://badge.fury.io/py/qtpythonic.png
     :target: http://badge.fury.io/py/qtpythonic
 
-.. image:: https://travis-ci.org/uranusjr/qtpythonic.png?branch=master
+.. .. image:: https://travis-ci.org/uranusjr/qtpythonic.png?branch=master
         :target: https://travis-ci.org/uranusjr/qtpythonic
 
-.. image:: https://pypip.in/d/qtpythonic/badge.png
+.. .. image:: https://pypip.in/d/qtpythonic/badge.png
         :target: https://pypi.python.org/pypi/qtpythonic
 
 
