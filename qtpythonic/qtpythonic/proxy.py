@@ -43,9 +43,9 @@ def make_class_proxy(qt_klass, QObject):
             # Try to load the name as-is. Complain if this fails.
             attr = old_getattribute(self, name)
         if isinstance(attr, lookup.PropertyDescriptor):
-            for k in attr:
-                attr[k] = make_method_proxy(attr[k], QObject)
-            setattr(qt_klass, name, property(**attr))
+            setattr(qt_klass, name, property(**{
+                k: make_method_proxy(attr[k], QObject) for k in attr
+            }))
             return old_getattribute(self, name)
         elif inspect.ismethod(attr):
             attr = make_method_proxy(attr, QObject)
