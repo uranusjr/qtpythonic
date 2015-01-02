@@ -26,9 +26,8 @@ def pythonize(qt_package, debug=False):
     for _, full_name, _ in pkgutil.iter_modules(path, prefix):
         name = full_name.split('.')[-1]
         if name == 'Qt':
-            # This is the Qt global namespace module. We use the name directly
-            # (but lowercased).
-            local_name = 'qt'
+            # This is PyQt's catch-all module. We don't want this.
+            continue
         elif name.startswith('Qt'):
             # Modules like QtCore, QtGui, QtWidgets, etc.
             # Strip "Qt" prefix, convert to lower (i.e. core, gui, widgets)
