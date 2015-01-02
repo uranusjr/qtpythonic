@@ -18,7 +18,7 @@ SETTER_PATTERN = re.compile(r'^set_[a-z][a-z_]*$')
 CLASS_PATTERN = re.compile(r'^[A-Z][A-Za-z]*$')
 
 
-class AttributeNotFound(Exception):
+class AttributeNotFound(AttributeError):
     pass
 
 
@@ -27,7 +27,7 @@ class PropertyDescriptor(dict):
 
 
 def _camelcase(name, capitalize=False):
-    # foo_bar_baz => fooBarBaz
+    # foo_bar_baz => fooBarBaz (or FooBarBaz if capitalize=True)
     comps = name.split('_')
     if capitalize:
         return ''.join(c.title() for c in comps)
