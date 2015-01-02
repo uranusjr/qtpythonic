@@ -5,4 +5,4 @@ __author__ = 'Tzu-ping Chung'
 __email__ = 'uranusjr@gmail.com'
 __version__ = '0.1.0'
 
-from .pythonic.base import pythonize    # noqa
+from .qtpythonic import pythonize   # noqa
