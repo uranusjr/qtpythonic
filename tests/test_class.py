@@ -8,6 +8,9 @@ from nose.tools import eq_, assert_true, assert_is_none
 
 import PyQt5
 from PyQt5.QtCore import QT_TRANSLATE_NOOP, qVersion, QFile
+# import PySide as PyQt5
+# from PySide.QtCore import QT_TRANSLATE_NOOP, qVersion, QFile
+
 from qtpythonic import pythonize
 
 

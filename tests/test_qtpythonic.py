@@ -12,13 +12,14 @@ import nose
 from nose.tools import ok_
 
 import PyQt5
+# import PySide as PyQt5
+
 from qtpythonic import pythonize
 
 
 def test_package():
     pythonize(PyQt5)
     import qtpythonic
-    ok_(qtpythonic.qt)
     ok_(qtpythonic.core)
     ok_(qtpythonic.gui)
 

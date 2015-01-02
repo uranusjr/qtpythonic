@@ -7,6 +7,9 @@ from nose.tools import eq_, assert_false, assert_true
 
 import PyQt5
 from PyQt5.QtCore import pyqtSignal
+# import PySide as PyQt5
+# from PySide.QtCore import Signal as pyqtSignal
+
 from qtpythonic import pythonize
 
 
